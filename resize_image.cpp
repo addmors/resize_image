@@ -18,8 +18,7 @@ int main()
 	
 	Mat image = imread(s, CV_LOAD_IMAGE_COLOR);
 	if (image.empty()) {
-		cout << "Ошибка ввода файла";
-		Sleep(5000);
+		image = imread("s1200.jpg", CV_LOAD_IMAGE_COLOR);
 		return -1;
 	}
 	cv::resize(image, image, Size(), a, a, 1);
